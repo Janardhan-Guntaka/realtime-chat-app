@@ -1,0 +1,30 @@
+# ────────────────────────────────────────────────────────────
+# Docker Ignore for Chat-App
+# ────────────────────────────────────────────────────────────
+
+# Ignore Git metadata
+.git
+.gitignore
+
+# Node modules (we install fresh inside image)
+node_modules
+client/node_modules
+server/node_modules
+
+# Build artifacts & static bundles (we rebuild inside image)
+client/dist
+server/public
+
+# Environment files (never bake secrets into the image)
+.env
+client/.env
+server/.env
+
+# Logs & temp
+npm-debug.log*
+yarn-debug.log*
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
